@@ -1,0 +1,58 @@
+/* Container - Forces items into a horizontal row that wraps if needed */
+#article-list {
+    display: flex;
+    flex-direction: row; /* Explicitly set horizontal direction */
+    flex-wrap: wrap;    /* Allows cards to move to the next line on small screens */
+    gap: 25px;
+    padding: 20px;
+    justify-content: flex-start; /* Aligns items to the left; change to 'center' if desired */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Individual Article Card */
+.card {
+    flex: 0 0 256px; /* Do not grow, do not shrink, stay exactly 256px wide */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Content inside the card stays vertical */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 256px; 
+    object-fit: cover; 
+    border-bottom: 3px solid #b30000;
+}
+
+.card h2 { 
+    font-size: 1.1rem; 
+    padding: 15px 10px 5px; 
+    margin: 0; 
+    color: #333; 
+}
+
+.card p { 
+    font-size: 0.9rem; 
+    padding: 0 10px 15px; 
+    color: #666; 
+    margin: 0;
+}
+
+.language-separator {
+    border: none;
+    border-top: 5px solid red; /* thickness + color */
+    margin: 40px 0;
+    opacity: 1;
+    width: 100%;
+}

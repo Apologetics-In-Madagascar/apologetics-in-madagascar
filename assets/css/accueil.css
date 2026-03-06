@@ -1,0 +1,69 @@
+/* Container remains the anchor for everything */
+.header-container {
+    position: relative;
+    width: 100%;
+    max-width: 1536px; 
+    height: 512px;     
+    margin: 0 auto;    
+    background-color: #000;
+    overflow: hidden;
+}
+
+/* THE BANNER */
+.banner {
+    width: 100%;
+    height: 100%;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 2.a) LOGO - Centered in the left black pillar */
+.logo-overlay {
+    position: absolute;
+    /* We use a calculation to find the center of the pillar */
+    left: 12.5%;       /* Increased from 8% to push it further away from the center */
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centers both horizontally and vertically */
+    z-index: 10;
+    width: 20%;        /* Defines the 'pillar' area for the logo */
+    display: flex;
+    justify-content: center;
+}
+
+.logo-overlay img {
+    height: 280px;     /* Increased from 220px to accommodate the 320px file */
+    width: auto;
+    filter: drop-shadow(0 0 25px rgba(0,0,0,0.9)); /* Deeper shadow for the larger size */
+    transition: transform 0.3s ease; /* Subtle effect for when users hover */
+}
+
+.logo-overlay img:hover {
+    transform: scale(1.05); /* Makes the logo feel interactive */
+}
+
+/* 2.b) MOTTO - Centered in the right black pillar */
+#slogan-overlay {
+    position: absolute;
+    /* Mirroring the left side for perfect symmetry */
+    right: 12.5%;      /* Increased from 5% to push it further away from the center */
+    top: 50%;
+    transform: translate(50%, -50%); /* Centers both horizontally and vertically */
+    z-index: 10;
+    width: 20%;        /* Defines the 'pillar' area for the text */
+    text-align: center;
+}
+
+#slogan-overlay h2 {
+    color: #FFD700;
+    font-size: 30px;   /* Slightly adjusted for better pillar fit */
+    font-family: 'Times New Roman', serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0,0,0,1);
+    margin: 0;
+}

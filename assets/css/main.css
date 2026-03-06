@@ -1,0 +1,184 @@
+/* Navigation: Reddish Gradient Variation (Deep Red → Crimson → Maroon) */
+.main-nav {
+  background: linear-gradient(90deg, #800000, #b22222, #4a0404);
+  background-size: 200% 200%;
+  animation: navGradientShift 12s ease infinite;
+  padding: 15px 0;
+  border-radius: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 0;
+}
+
+@keyframes navGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.main-nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 16px;
+  transition: color 0.3s, background-color 0.3s, transform 0.3s;
+  border-radius: 4px;
+}
+
+.main-nav li a:hover {
+  color: #ffeb3b; 
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* Footer: Greenish Gradient Variation (Emerald → Forest → Dark Olive) */
+.site-footer {
+  background: linear-gradient(135deg, #064e3b, #059669, #022c22);
+  color: #f0f0f0;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.site-footer a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.site-footer a:hover {
+  color: #ff9800; 
+}
+
+.site-footer p:last-child {
+  margin-top: 20px;
+}
+
+.site-footer img {
+  width: 30px;
+  height: 30px;
+  margin: 0 8px;
+  vertical-align: middle;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.site-footer img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .main-nav ul {
+    gap: 12px;
+  }
+  .main-nav li a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .site-footer {
+    padding: 30px 10px;
+    font-size: 13px;
+  }
+  .site-footer img {
+    width: 25px;
+    height: 25px;
+    margin: 0 6px;
+  }
+}
+
+/* Reset body to ensure no gaps between sections */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+}
+
+/* Tighter Hero Section */
+#welcome-hero {
+    padding: 20px 0; /* Internal padding only */
+    text-align: left;
+}
+
+#welcome-hero h2 {
+    margin-top: 0; /* Removes top gap to Nav */
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: #800000;
+}
+
+#welcome-hero h3 {
+    margin: 10px 0;
+    font-size: 0.9rem;
+    color: #555;
+    text-transform: uppercase;
+}
+
+/* Rearranging word and sentence density */
+#welcome-hero p {
+    margin: 8px 0; /* Tightens space between paragraphs */
+    font-size: 0.92rem;
+    line-height: 1.5; /* Optimized for "clean" reading */
+    text-align: justify; /* Optional: makes the edges look like a clean block */
+}
+
+/* Grid Spacing */
+.access-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px; /* Tighter gap between cards */
+    padding-bottom: 20px; /* Internal cushion before footer */
+}
+
+.card {
+    border: 1px solid #e0e0e0;
+    padding: 15px; /* Tight internal spacing */
+    background: #fff;
+    transition: 0.2s;
+}
+
+.card h4 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+}
+
+.card p {
+    margin: 0 0 12px 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Flush Sectioning */
+hr {
+    margin: 10px 0; /* Minimal break */
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto; /* Centers the content block */
+    padding: 0 20px; /* Keeps side breathing room, but no top/bottom gaps */
+}

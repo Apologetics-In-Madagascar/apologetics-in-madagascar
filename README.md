@@ -1,1 +1,0 @@
-# apologetics-in-madagascar

@@ -1,6 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .site-header {
     background-color: #000;
 }
+
 /* Container remains the anchor for everything */
 .header-container {
     position: relative;
@@ -24,45 +34,43 @@
     object-fit: contain;
 }
 
-/* 2.a) LOGO - Centered in the left black pillar */
+/* 2.a) LOGO */
 .logo-overlay {
     position: absolute;
-    /* We use a calculation to find the center of the pillar */
-    left: 12.5%;       /* Increased from 8% to push it further away from the center */
+    left: 12.5%;
     top: 50%;
-    transform: translate(-50%, -50%); /* Centers both horizontally and vertically */
+    transform: translate(-50%, -50%);
     z-index: 10;
-    width: 20%;        /* Defines the 'pillar' area for the logo */
+    width: 20%;
     display: flex;
     justify-content: center;
 }
 
 .logo-overlay img {
-    height: 280px;     /* Increased from 220px to accommodate the 320px file */
+    height: 280px;
     width: auto;
-    filter: drop-shadow(0 0 25px rgba(0,0,0,0.9)); /* Deeper shadow for the larger size */
-    transition: transform 0.3s ease; /* Subtle effect for when users hover */
+    filter: drop-shadow(0 0 25px rgba(0,0,0,0.9));
+    transition: transform 0.3s ease;
 }
 
 .logo-overlay img:hover {
-    transform: scale(1.05); /* Makes the logo feel interactive */
+    transform: scale(1.05);
 }
 
-/* 2.b) MOTTO - Centered in the right black pillar */
+/* 2.b) MOTTO */
 #slogan-overlay {
     position: absolute;
-    /* Mirroring the left side for perfect symmetry */
-    right: 12.5%;      /* Increased from 5% to push it further away from the center */
+    right: 12.5%;
     top: 50%;
-    transform: translate(50%, -50%); /* Centers both horizontally and vertically */
+    transform: translate(50%, -50%);
     z-index: 10;
-    width: 20%;        /* Defines the 'pillar' area for the text */
+    width: 20%;
     text-align: center;
 }
 
 #slogan-overlay h4 {
     color: #FFD700;
-    font-size: 30px;   /* Slightly adjusted for better pillar fit */
+    font-size: 30px;
     font-family: 'Times New Roman', serif;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -71,30 +79,46 @@
     margin: 0;
 }
 
-/* RESPONSIVE ADJUSTMENTS Tablets*/
+/* MAIN CONTENT */
+main {
+    padding: 1rem;
+}
+
+h1, h2, h3, h4 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+p, li {
+    line-height: 1.6;
+}
+
+/* TABLETS */
 @media (max-width: 768px) {
     .header-container {
-        height: 256px; /* 50% of 512px */
+        height: 256px;
     }
 
     .logo-overlay img {
-        height: 224px; /* 80% of 280px */
+        height: 224px;
     }
 
     #slogan-overlay h4 {
-        font-size: 24px; /* 80% of 30px */
-        letter-spacing: 2.4px; /* 80% of 3px */
+        font-size: 24px;
+        letter-spacing: 2.4px;
+    }
+
+    p, li {
+        text-align: left; /* fixes justified text on tablet */
     }
 }
 
-/* RESPONSIVE ADJUSTMENTS Mobile */
+/* MOBILE */
 @media (max-width: 480px) {
-    /* Banner at 45% of 512px */
     .header-container {
         height: 230px;
     }
 
-    /* Logo at 20% of 320px = 64px, bottom-left corner of banner */
     .logo-overlay {
         left: 0;
         top: auto;
@@ -108,7 +132,6 @@
         width: 64px;
     }
 
-    /* Slogan at 30% of 30px = 9px, sitting above the banner */
     #slogan-overlay {
         right: auto;
         left: 50%;
@@ -118,7 +141,11 @@
     }
 
     #slogan-overlay h4 {
-        font-size: 9px;
+        font-size: 14px; /* bumped from 9px — unreadable */
         letter-spacing: 0.9px;
+    }
+
+    p, li {
+        text-align: left; /* fixes justified text on mobile */
     }
 }

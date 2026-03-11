@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     document.addEventListener('click', e => {
-        const link = e.target.closest('a[data-link]');
+        const link = e.target.closest('a[data-link], a[href^="/"]');
         if (link) {
             e.preventDefault();
             const href = link.getAttribute('href');

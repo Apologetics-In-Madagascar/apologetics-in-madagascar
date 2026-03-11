@@ -1,5 +1,5 @@
 # README
-## apologetics-in-madagascar
+## christian-apologetics-in-madagascar
 - Ce projet consiste en la création d'un site web d'analyse critique de l'islam à la lumière de ses propres textes sources (Coran, Hadith, Tafsir), des textes bibliques et des faits historiques. 
 - L'objectif principal est d'équiper les chrétiens malgaches face aux défis théologiques contemporains et de purifier la foi du syncrétisme religieux.
 ## License

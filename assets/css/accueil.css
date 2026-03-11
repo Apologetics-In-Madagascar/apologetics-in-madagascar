@@ -71,7 +71,7 @@
     margin: 0;
 }
 
-/* RESPONSIVE ADJUSTMENTS on mobile/Tablets*/
+/* RESPONSIVE ADJUSTMENTS Tablets*/
 @media (max-width: 768px) {
     .header-container {
         height: 256px; /* 50% of 512px */
@@ -84,5 +84,41 @@
     #slogan-overlay h2 {
         font-size: 24px; /* 80% of 30px */
         letter-spacing: 2.4px; /* 80% of 3px */
+    }
+}
+
+/* RESPONSIVE ADJUSTMENTS Mobile */
+@media (max-width: 480px) {
+    /* Banner at 45% of 512px */
+    .header-container {
+        height: 230px;
+    }
+
+    /* Logo at 20% of 320px = 64px, bottom-left corner of banner */
+    .logo-overlay {
+        left: 0;
+        top: auto;
+        bottom: 0;
+        transform: none;
+        width: 64px;
+    }
+
+    .logo-overlay img {
+        height: 64px;
+        width: 64px;
+    }
+
+    /* Slogan at 30% of 30px = 9px, sitting above the banner */
+    #slogan-overlay {
+        right: auto;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -100%);
+        width: 100%;
+    }
+
+    #slogan-overlay h2 {
+        font-size: 9px;
+        letter-spacing: 0.9px;
     }
 }

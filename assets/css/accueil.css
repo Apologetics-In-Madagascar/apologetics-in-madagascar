@@ -60,7 +60,7 @@
     text-align: center;
 }
 
-#slogan-overlay h2 {
+#slogan-overlay h4 {
     color: #FFD700;
     font-size: 30px;   /* Slightly adjusted for better pillar fit */
     font-family: 'Times New Roman', serif;
@@ -81,7 +81,7 @@
         height: 224px; /* 80% of 280px */
     }
 
-    #slogan-overlay h2 {
+    #slogan-overlay h4 {
         font-size: 24px; /* 80% of 30px */
         letter-spacing: 2.4px; /* 80% of 3px */
     }
@@ -117,7 +117,7 @@
         width: 100%;
     }
 
-    #slogan-overlay h2 {
+    #slogan-overlay h4 {
         font-size: 9px;
         letter-spacing: 0.9px;
     }

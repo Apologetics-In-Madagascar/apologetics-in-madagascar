@@ -72,3 +72,17 @@
 }
 
 /* RESPONSIVE ADJUSTMENTS on mobile/Tablets*/
+@media (max-width: 768px) {
+    .header-container {
+        height: 256px; /* 50% of 512px */
+    }
+
+    .logo-overlay img {
+        height: 224px; /* 80% of 280px */
+    }
+
+    #slogan-overlay h2 {
+        font-size: 24px; /* 80% of 30px */
+        letter-spacing: 2.4px; /* 80% of 3px */
+    }
+}

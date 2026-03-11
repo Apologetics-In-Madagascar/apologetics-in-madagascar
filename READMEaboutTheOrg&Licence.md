@@ -4,6 +4,6 @@
 - L'objectif principal est d'équiper les chrétiens malgaches face aux défis théologiques contemporains et de purifier la foi du syncrétisme religieux.
 ## License
 ### Code Source & Contenu Multimédia
+- © 2026 Apologetics-in-Madagascar. All rights reserved.
 - © 2026 A1n4C0d3. Tous droits réservés.
-- © 2026 apologetics_in_Madagascar. All rights reserved.
-Aucune reproduction, modification ou distribution ni du code source ni des images utilisés par ce site n'est autorisée sans permission explicite de l'auteur.
+Aucune reproduction, modification ou distribution ni du code source ni des images utilisés par ce site n'est autorisée sans permission explicite de l'auteur/organisation.

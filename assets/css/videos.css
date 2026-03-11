@@ -8,11 +8,11 @@
     flex-wrap: wrap;
     gap: 30px;
     padding: 20px;
-    justify-content: center; /* Centre les cartes sur la page */
+    justify-content: center;
 }
 
 .video-card {
-    width: 640px; /* Largeur fixe identique à la miniature */
+    width: 640px;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 12px;
@@ -38,11 +38,10 @@
     object-fit: cover;
 }
 
-/* Alignement du titre sous la miniature */
 .video-info {
     padding: 20px;
     width: 100%;
-    box-sizing: border-box; /* Assure que le padding ne dépasse pas des 640px */
+    box-sizing: border-box;
 }
 
 .video-info h3 {
@@ -50,7 +49,6 @@
     margin: 0;
     color: #2c3e50;
     line-height: 1.4;
-    /* Coupe le texte proprement s'il est trop long sur l'index */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
@@ -63,7 +61,7 @@
    ============================================================ */
 
 .video-player-container {
-    width: 640px; /* Aligné sur la taille de la vidéo */
+    width: 640px;
     margin: 40px auto;
     background: #fff;
     border-radius: 12px;
@@ -89,28 +87,23 @@ video {
 }
 
 /* ============================================================
-   3. DISCLAIMER BOX (Special Highlight)
+   3. DISCLAIMER BOX
    ============================================================ */
 
 .disclaimer-box {
     margin-top: 30px;
     padding: 20px;
-    background-color: #ffffff; /* Essential for eye health & visibility */
-    
-    /* The Glowing Squared Pattern: Red-Orange-Yellow */
+    background-color: #ffffff;
     border: 4px solid;
     border-image: linear-gradient(45deg, #ff0000, #ff8c00, #ffd700) 1;
-    
-    /* Subtle outer glow to make it stand out against the white page */
     box-shadow: 0 0 15px rgba(255, 140, 0, 0.2);
-    
-    border-radius: 4px; /* Keeps the "Squared" look while being polished */
+    border-radius: 4px;
 }
 
 .disclaimer-box p {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: #333; /* High contrast dark text on white background */
+    color: #333;
     margin-bottom: 15px;
 }
 
@@ -119,16 +112,87 @@ video {
 }
 
 .disclaimer-box strong {
-    color: #ff4500; /* Deep orange-red for ENG/MG tags to catch the eye */
+    color: #ff4500;
     font-weight: 800;
 }
 
-/* Specific styling for the header inside the box */
 .disclaimer-box p:first-child strong {
     text-transform: uppercase;
     text-decoration: underline;
     display: block;
     margin-bottom: 10px;
     font-size: 1.1rem;
-    color: #000; /* Black for the main title for maximum sobriety */
+    color: #000;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLETS (max 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+    .video-card {
+        width: 100%;
+    }
+
+    .thumbnail-container {
+        width: 100%;
+        height: 360px;
+    }
+
+    .video-player-container {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 360px;
+    }
+
+    .video-info h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (max 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+    #video-list {
+        gap: 16px;
+        padding: 12px;
+    }
+
+    .thumbnail-container {
+        height: 240px;
+    }
+
+    .video-wrapper {
+        height: 240px;
+    }
+
+    .video-player-container {
+        margin: 12px auto;
+        border-radius: 8px;
+    }
+
+    .video-info {
+        padding: 12px;
+    }
+
+    .video-info h3 {
+        font-size: 1rem;
+    }
+
+    .video-description {
+        padding: 14px;
+    }
+
+    .disclaimer-box {
+        padding: 14px;
+    }
+
+    .disclaimer-box p {
+        font-size: 0.85rem;
+        text-align: left;
+    }
 }

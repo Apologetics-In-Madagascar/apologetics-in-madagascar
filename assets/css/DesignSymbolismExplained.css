@@ -1,3 +1,7 @@
+/* ============================================================
+   SYMBOLISM PAGE
+   ============================================================ */
+
 .symbolism-page {
     max-width: 1200px;
     margin: 0 auto;
@@ -6,53 +10,55 @@
     color: #e0e0e0;
 }
 
-/* H1: MAJ, UNDERLINED */
 .symbolism-page h1 {
     text-transform: uppercase;
     text-decoration: underline;
     text-align: center;
     margin-bottom: 50px;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
-/* H2: MAJ, NO GLOW */
 .symbolism-page h2 {
     text-transform: uppercase;
     font-size: 1.3rem;
     margin-bottom: 15px;
-    color: #e0e0e0; /* Clean light grey/white */
+    color: #e0e0e0;
 }
 
-/* THE SQUARE/RECTANGLE HOLDERS: YELLOW-ORANGE GLOW */
+/* ============================================================
+   GLOW PATTERN
+   ============================================================ */
+
 .glow-pattern {
-    display: inline-block; /* Wraps tightly around the image */
-    line-height: 0;        /* Removes bottom white space gap */
+    display: inline-block;
+    line-height: 0;
     border: 4px solid;
-    /* Gradient border from Yellow to Orange */
     border-image: linear-gradient(45deg, #FFD700, #FF8C00) 1;
-    /* Outer glow in yellow-orange pattern */
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4), 
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4),
                 0 0 40px rgba(255, 140, 0, 0.2);
 }
 
-/* SPECIFIC LOGO SHADOW (Beta 2.0 Shield Glow) */
 .logo-large {
-    /* This targets only the circular logo inside the square glow-pattern */
     filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
-    border-radius: 50%; /* Ensures the image itself is treated as a circle */
+    border-radius: 50%;
     transition: 0.3s ease;
 }
 
 .logo-large:hover {
     filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.6));
-    transform: scale(1.02); /* Slight pulse when the reader focuses on the symbols */
+    transform: scale(1.02);
 }
 
-/* Ensure the glow-pattern box for the logo is also circular */
 .logo-row .image-box.glow-pattern {
     border-radius: 50%;
-    border-image: none; /* We replace the gradient-border with a standard one for circles */
-    border: 4px solid #FFD700; 
+    border-image: none;
+    border: 4px solid #FFD700;
 }
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
 
 .explanation-row {
     display: grid;
@@ -73,75 +79,140 @@
     gap: 30px;
 }
 
-@media (max-width: 768px) {
-    .explanation-row {
-        grid-template-columns: 1fr;
-    }
-}
+/* ============================================================
+   TEXT BOX
+   ============================================================ */
 
-/* The Main Container */
 .text-box {
     position: relative;
-    padding: 30px; /* Increased padding for better breathing room */
+    padding: 30px;
     margin: 20px;
-    /* Use a very dark charcoal, not pure black, for premium feel */
-    background: #121212; 
+    background: #121212;
     color: #ffffff;
     border-radius: 12px;
-    line-height: 1.6; /* Improves readability of long paragraphs */
-    
-    /* Creating the Glow Effect - matches your Logo's intensity */
+    line-height: 1.6;
     border: 2px solid transparent;
     background-clip: padding-box;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 
-                0 0 40px rgba(255, 0, 0, 0.05), 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1),
+                0 0 40px rgba(255, 0, 0, 0.05),
                 0 0 40px rgba(0, 255, 0, 0.05);
 }
 
-/* The Glowing Border Pattern (White-Red-Green) */
 .text-box::before {
     content: "";
     position: absolute;
     top: -2px; bottom: -2px;
     left: -2px; right: -2px;
-    /* This creates the thin multi-color frame */
     background: linear-gradient(45deg, #ffffff, #ff4444, #44ff44);
-    border-radius: 14px; /* Slightly larger than container radius */
+    border-radius: 14px;
     z-index: -1;
 }
 
-/* Typography Adjustments */
 .text-box h2 {
     border-bottom: 1px solid #333;
     padding-bottom: 12px;
     margin-top: 0;
-    color: #FFD700; /* Gold header to tie in with the Logo's gold light */
+    color: #FFD700;
 }
 
-/* 1. Spiritual Sword - Off-White/Cream */
+/* ============================================================
+   COLOR CLASSES
+   ============================================================ */
+
 .color-spiritual {
-    color: #fdfdf5; 
+    color: #fdfdf5;
     margin-bottom: 20px;
 }
 
-/* 2. Demographic Sword - Softened Green */
 .color-demographic {
-    /* Slightly lighter green so it doesn't "vibrate" against the dark background */
-    color: #77ff77; 
+    color: #77ff77;
     margin-bottom: 20px;
 }
 
-/* 3. Cultural Sword - Softened Red */
 .color-cultural {
-    /* Moving away from pure 'neon' red for better eye comfort */
-    color: #ff6666; 
+    color: #ff6666;
     margin-bottom: 20px;
 }
 
-/* Specific styling for the bold terms inside the lists */
 .text-box li strong {
     text-transform: uppercase;
     letter-spacing: 1px;
-    /* Adding a tiny bit of text-shadow makes the colored terms look like they are glowing */
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================================
+   RESPONSIVE — TABLETS (max 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+    .explanation-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .symbolism-page {
+        padding: 20px 14px;
+    }
+
+    .symbolism-page h1 {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .symbolism-page h2 {
+        font-size: 1.1rem;
+    }
+
+    .text-box {
+        margin: 10px 0;
+        padding: 20px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (max 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+    .symbolism-page {
+        padding: 14px 10px;
+    }
+
+    .symbolism-page h1 {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .symbolism-page h2 {
+        font-size: 1rem;
+    }
+
+    .text-box {
+        margin: 8px 0;
+        padding: 14px;
+        border-radius: 8px;
+    }
+
+    .text-box h2 {
+        font-size: 0.95rem;
+    }
+
+    .color-spiritual,
+    .color-demographic,
+    .color-cultural {
+        font-size: 0.88rem;
+        text-align: left;
+    }
+
+    .banner-column {
+        gap: 16px;
+    }
+
+    .glow-pattern {
+        width: 100%;
+    }
+
+    .glow-pattern img {
+        width: 100%;
+        height: auto;
+    }
 }

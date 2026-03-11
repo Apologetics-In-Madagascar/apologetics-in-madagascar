@@ -1,18 +1,20 @@
-/* Container - Forces items into a horizontal row that wraps if needed */
+/* ============================================================
+   ARTICLE LIST
+   ============================================================ */
+
 #article-list {
     display: flex;
-    flex-direction: row; /* Explicitly set horizontal direction */
-    flex-wrap: wrap;    /* Allows cards to move to the next line on small screens */
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 25px;
     padding: 20px;
-    justify-content: flex-start; /* Aligns items to the left; change to 'center' if desired */
+    justify-content: flex-start;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* Individual Article Card */
 .card {
-    flex: 0 0 256px; /* Do not grow, do not shrink, stay exactly 256px wide */
+    flex: 0 0 256px;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -20,7 +22,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
-    flex-direction: column; /* Content inside the card stays vertical */
+    flex-direction: column;
 }
 
 .card:hover {
@@ -30,29 +32,81 @@
 
 .card img {
     width: 100%;
-    height: 256px; 
-    object-fit: cover; 
+    height: 256px;
+    object-fit: cover;
     border-bottom: 3px solid #b30000;
 }
 
-.card h2 { 
-    font-size: 1.1rem; 
-    padding: 15px 10px 5px; 
-    margin: 0; 
-    color: #333; 
+.card h2 {
+    font-size: 1.1rem;
+    padding: 15px 10px 5px;
+    margin: 0;
+    color: #333;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
-.card p { 
-    font-size: 0.9rem; 
-    padding: 0 10px 15px; 
-    color: #666; 
+.card p {
+    font-size: 0.9rem;
+    padding: 0 10px 15px;
+    color: #666;
     margin: 0;
+    text-align: left;
 }
 
 .language-separator {
     border: none;
-    border-top: 5px solid red; /* thickness + color */
+    border-top: 5px solid red;
     margin: 40px 0;
     opacity: 1;
     width: 100%;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLETS (max 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+    #article-list {
+        justify-content: center;
+        gap: 16px;
+        padding: 14px;
+    }
+
+    .card {
+        flex: 0 0 calc(50% - 16px); /* 2 cards per row on tablet */
+    }
+
+    .card img {
+        height: 180px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (max 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+    #article-list {
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .card {
+        flex: 0 0 100%; /* 1 card per row on mobile */
+    }
+
+    .card img {
+        height: 160px;
+    }
+
+    .card h2 {
+        font-size: 1rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+
+    .language-separator {
+        margin: 20px 0;
+    }
 }

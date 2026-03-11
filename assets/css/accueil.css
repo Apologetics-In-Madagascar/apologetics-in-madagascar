@@ -70,3 +70,44 @@
     text-shadow: 2px 2px 8px rgba(0,0,0,1);
     margin: 0;
 }
+
+/* RESPONSIVE ADJUSTMENTS on mobile/Tablets*/
+@media (max-width: 768px) {
+    .header-container {
+        height: 220px;
+    }
+
+    .logo-overlay {
+        left: 18%;
+        width: 30%;
+    }
+
+    .logo-overlay img {
+        height: 150px;
+    }
+
+    #slogan-overlay {
+        right: 2%;
+        width: 28%;
+    }
+
+    #slogan-overlay h2 {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        height: 180px;
+    }
+
+    .logo-overlay img {
+        height: 110px;
+    }
+
+    #slogan-overlay h2 {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+}

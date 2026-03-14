@@ -7,6 +7,7 @@
     "summary": "Pourquoi vivre sous la Charia est du suicide mental et intellectuel.",
     "content": "/assets/pages/articles/Art1-TsyHoAnkafizinaoNyFiainanaAmbanyFahefanaIslamika.html"
   },
+
     {
     "id": 2,
     "title": "Without The Church Militantism, Christianity Would Have Died Out Long Time Ago",
@@ -14,5 +15,15 @@
     "thumbnail": "/assets/medias/articles/thumbnails/Art2-WithoutTheChurchMilitantismChristianityWouldHaveDiedOutLongTimeAgo.png",
     "summary": "The Two Swords of Christ explained.",
     "content": "/assets/pages/articles/Art2-WithoutTheChurchMilitantismChristianityWouldHaveDiedOutALongTimeAgo.html"
+  },
+
+  {
+    "id": 3,
+    "title": "Why Islam and Christianity Are Inherently Incompatible",
+    "date": "January 10, 2026",
+    "thumbnail": "/assets/medias/articles/thumbnails/Art3-WhyIslam&ChristianityAreInherentlyIncompatible.png",
+    "summary": "Fourteen centuries of civilizational collision.",
+    "content": "/assets/pages/articles/Art3-WhyIslam&ChristianityAreInherentlyIncompatible.html"
   }
+
 ]

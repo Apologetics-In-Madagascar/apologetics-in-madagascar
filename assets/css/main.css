@@ -17,12 +17,12 @@ body {
    NAVIGATION
    ===================== */
 .main-nav {
-    background: linear-gradient(90deg, #800000, #b22222, #4a0404);
+    background: linear-gradient(90deg, #6B0F0F, #8B1A1A, #3D0505);
     background-size: 200% 200%;
     animation: navGradientShift 12s ease infinite;
     padding: 15px 0;
     border-radius: 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     text-align: center;
     margin: 0;
 }
@@ -62,7 +62,7 @@ body {
    FOOTER
    ===================== */
 .site-footer {
-    background: linear-gradient(135deg, #064e3b, #059669, #022c22);
+    background: linear-gradient(135deg, #0B3D2E, #1F6F5A, #07281E);
     color: #f0f0f0;
     text-align: center;
     padding: 40px 20px;

@@ -13,8 +13,13 @@ body {
 
 /* Container remains the anchor for everything */
 .header-container {
-    height: auto;
-    aspect-ratio: 1536 / 512; /* This keeps the exact shape of your original banner */
+    position: relative;
+    width: 100%;
+    max-width: 1536px; 
+    height: 512px;     
+    margin: 0 auto;    
+    background-color: #000;
+    overflow: hidden;
 }
 
 /* THE BANNER - Ensuring the "Standoff" is central */
@@ -55,11 +60,6 @@ body {
 /* MAIN CONTENT */
 main {
     padding: 1rem;
-}
-
-h1, h2, h3, h4 {
-    word-break: break-word;
-    overflow-wrap: break-word;
 }
 
 p, li {

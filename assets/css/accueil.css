@@ -1,4 +1,39 @@
-/* --- 1. PC VIEW (OG Art Style) --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* --- 1. PC VIEW (THE "OG" LOOK) --- */
+.site-header {
+    background-color: #000;
+}
+
+.header-container {
+    position: relative;
+    width: 100%;
+    max-width: 1536px; 
+    height: 512px;     
+    margin: 0 auto;    
+    background-color: #000;
+    overflow: hidden;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+/* OG PC Logo Placement */
 .logo-overlay {
     position: absolute;
     left: 12.5%; /* Floating artistic placement */
@@ -11,6 +46,10 @@
     height: 280px; /* Full size for desktop */
     width: auto;
     filter: drop-shadow(0 0 25px rgba(0,0,0,0.9));
+}
+
+.logo-overlay img:hover {
+    transform: scale(1.05);
 }
 
 /* --- 2. TABLET VIEW (The 180px Adjustment) --- */
@@ -30,7 +69,7 @@
     }
 }
 
-/* --- 3. MOBILE VIEW (The "Templar Protector") --- */
+/* --- 3. MOBILE VIEW --- */
 @media (max-width: 480px) {
     .header-container {
         height: 180px; /* Keep header compact */

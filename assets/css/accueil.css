@@ -13,13 +13,8 @@ body {
 
 /* Container remains the anchor for everything */
 .header-container {
-    position: relative;
-    width: 100%;
-    max-width: 1536px; 
-    height: 512px;     
-    margin: 0 auto;    
-    background-color: #000;
-    overflow: hidden;
+    height: auto;
+    aspect-ratio: 1536 / 512; /* This keeps the exact shape of your original banner */
 }
 
 /* THE BANNER - Ensuring the "Standoff" is central */

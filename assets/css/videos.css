@@ -70,9 +70,16 @@
 }
 
 .video-wrapper {
-    width: 640px;
-    height: 480px;
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 4 / 3; /* Matches the 640/480 size */
     background: #000;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Removes the default iframe border */
 }
 
 video {

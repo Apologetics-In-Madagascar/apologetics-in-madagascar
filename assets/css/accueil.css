@@ -1,95 +1,49 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
-/* --- 1. PC VIEW (THE "OG" LOOK) --- */
-.site-header {
-    background-color: #000;
-}
-
-.header-container {
-    position: relative;
-    width: 100%;
-    max-width: 1536px; 
-    height: 512px;     
-    margin: 0 auto;    
-    background-color: #000;
-    overflow: hidden;
-}
-
-.banner {
-    width: 100%;
-    height: 100%;
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; 
-}
-
-/* OG PC Logo Placement */
+/* --- 1. PC VIEW (OG Art Style) --- */
 .logo-overlay {
     position: absolute;
-    left: 12.5%;
+    left: 12.5%; /* Floating artistic placement */
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    display: flex;
-    justify-content: center;
 }
 
 .logo-overlay img {
-    height: 280px;
+    height: 280px; /* Full size for desktop */
     width: auto;
     filter: drop-shadow(0 0 25px rgba(0,0,0,0.9));
-    transition: transform 0.3s ease;
 }
 
-.logo-overlay img:hover {
-    transform: scale(1.05);
-}
+/* --- 2. TABLET VIEW (The 180px Adjustment) --- */
+@media (max-width: 1024px) {
+    .header-container {
+        height: 350px; /* Slightly taller to accommodate the 180px logo */
+    }
 
-/* --- 2. TABLET & MOBILE (THE "ALIGNED" LOOK) --- */
-@media (max-width: 1200px) {
-    /* Align logo with the 'Blue Line' of the text below when screen shrinks */
     .logo-overlay {
-        left: 5%; /* Matches the 90% width container margin approximately */
+        left: 5%; /* Align to Blue Line */
         transform: translateY(-50%);
     }
-}
-
-@media (max-width: 768px) {
-    .header-container {
-        height: 256px;
-    }
 
     .logo-overlay img {
-        height: 180px;
-    }
-    
-    .logo-overlay {
-        left: 5%;
+        height: 180px; /* Your requested size for mid-range devices */
+        width: 180px;
     }
 }
 
+/* --- 3. MOBILE VIEW (The "Templar Protector") --- */
 @media (max-width: 480px) {
     .header-container {
-        height: 160px;
+        height: 180px; /* Keep header compact */
     }
 
     .logo-overlay {
-        left: 5%;
+        left: 4%; /* Tighten margin to give the Templar breathing room */
     }
 
     .logo-overlay img {
-        height: 60px;
-        width: 60px;
+        /* Dropping below 180px here is critical to see the knight */
+        height: 80px; 
+        width: 80px;
         filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
     }
 }

@@ -36,53 +36,60 @@ body {
 /* OG PC Logo Placement */
 .logo-overlay {
     position: absolute;
-    left: 12.5%; /* Floating artistic placement */
+    left: 12.5%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
+    display: flex;
+    justify-content: center;
 }
 
 .logo-overlay img {
-    height: 280px; /* Full size for desktop */
+    height: 280px;
     width: auto;
     filter: drop-shadow(0 0 25px rgba(0,0,0,0.9));
+    transition: transform 0.3s ease;
 }
 
 .logo-overlay img:hover {
     transform: scale(1.05);
 }
 
-/* --- 2. TABLET VIEW (The 180px Adjustment) --- */
-@media (max-width: 1024px) {
-    .header-container {
-        height: 350px; /* Slightly taller to accommodate the 180px logo */
-    }
-
+/* --- 2. TABLET & MOBILE (THE "ALIGNED" LOOK) --- */
+@media (max-width: 1200px) {
+    /* Align logo with the 'Blue Line' of the text below when screen shrinks */
     .logo-overlay {
-        left: 5%; /* Align to Blue Line */
+        left: 5%; /* Matches the 90% width container margin approximately */
         transform: translateY(-50%);
-    }
-
-    .logo-overlay img {
-        height: 180px; /* Your requested size for mid-range devices */
-        width: 180px;
     }
 }
 
-/* --- 3. MOBILE VIEW --- */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .header-container {
-        height: 180px; /* Keep header compact */
-    }
-
-    .logo-overlay {
-        left: 4%; /* Tighten margin to give the Templar breathing room */
+        height: 256px;
     }
 
     .logo-overlay img {
-        /* Dropping below 180px here is critical to see the knight */
-        height: 80px; 
-        width: 80px;
+        height: 180px;
+    }
+    
+    .logo-overlay {
+        left: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        height: 160px;
+    }
+
+    .logo-overlay {
+        left: 5%;
+    }
+
+    .logo-overlay img {
+        height: 60px;
+        width: 60px;
         filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
     }
 }

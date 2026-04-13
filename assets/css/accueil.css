@@ -55,7 +55,16 @@ body {
     transform: scale(1.05);
 }
 
-/* --- 2. TABLET & MOBILE (THE "ALIGNED" LOOK) --- */
+/* --- 2. MAIN CONTENT CONTAINER --- */
+/* This handles the "Blue Line" alignment for the text on all devices */
+main {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* --- 3. TABLET & MOBILE (THE "ALIGNED" LOOK) --- */
 @media (max-width: 1200px) {
     /* Align logo with the 'Blue Line' of the text below when screen shrinks */
     .logo-overlay {

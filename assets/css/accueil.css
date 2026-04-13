@@ -7,43 +7,51 @@ body {
     padding: 0;
 }
 
-.site-header {
-    background-color: #000;
+/* 1. SHARED CONTAINER 
+   This defines your "Blue Lines". Everything inside this will align vertically. */
+.container {
+    width: 90%;            /* Breathing room on small screens */
+    max-width: 1200px;     /* Your desktop column width */
+    margin: 0 auto;        /* Centers the column */
+    position: relative;
 }
 
-/* Container remains the anchor for everything */
+.site-header {
+    background-color: #000;
+    width: 100%;
+}
+
 .header-container {
     position: relative;
     width: 100%;
-    max-width: 1536px; 
-    height: 512px;     
-    margin: 0 auto;    
+    height: 512px;
     background-color: #000;
     overflow: hidden;
+    /* Use flex to align the logo and banner inside the container */
+    display: flex;
+    align-items: center;
 }
 
-/* THE BANNER - Ensuring the "Standoff" is central */
+/* THE BANNER - Now fills the background of the header */
 .banner {
+    position: absolute;
     width: 100%;
     height: 100%;
+    left: 0;
+    top: 0;
 }
 
 .banner img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Keeps the "Force Doctrine" imagery intact without cropping */
+    object-fit: contain; 
 }
 
-/* THE LOGO - Your sole "Standard" */
+/* THE LOGO - Locked to the left edge of the .container */
 .logo-overlay {
-    position: absolute;
-    left: 12.5%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     z-index: 10;
-    width: 20%;
-    display: flex;
-    justify-content: center;
+    /* No more absolute centering math; it sits at the start of the flex container */
+    margin-left: 0; 
 }
 
 .logo-overlay img {
@@ -57,42 +65,31 @@ body {
     transform: scale(1.05);
 }
 
-/* MAIN CONTENT */
+/* MAIN CONTENT - Uses the same .container class for the Blue Line */
 main {
-    padding: 1rem;
+    padding: 2rem 0; /* Vertical padding only; container handles the sides */
 }
 
-p, li {
-    line-height: 1.6;
-}
-
-/* TABLETS - Balanced for the "Gatekeeper" stance */
+/* TABLETS */
 @media (max-width: 768px) {
     .header-container {
         height: 256px;
     }
 
     .logo-overlay img {
-        height: 224px;
+        height: 180px;
     }
 }
 
 /* MOBILE - Compact Armor */
 @media (max-width: 480px) {
     .header-container {
-        height: 160px; /* Short, but still shows the art */
-    }
-
-    .logo-overlay {
-        left: 8%; /* Slightly more breathing room from the edge */
-        top: 50%;
-        transform: translateY(-50%);
-        width: 60px;
+        height: 160px;
     }
 
     .logo-overlay img {
-        height: 60px; 
+        height: 60px;
         width: 60px;
-        filter: drop-shadow(0 0 10px rgba(0,0,0,0.8)); /* Sharper shadow for small size */
+        filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
     }
 }

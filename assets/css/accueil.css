@@ -7,38 +7,24 @@ body {
     padding: 0;
 }
 
-/* 1. SHARED CONTAINER 
-   This defines your "Blue Lines". Everything inside this will align vertically. */
-.container {
-    width: 90%;            /* Breathing room on small screens */
-    max-width: 1200px;     /* Your desktop column width */
-    margin: 0 auto;        /* Centers the column */
-    position: relative;
-}
-
+/* --- 1. PC VIEW (THE "OG" LOOK) --- */
 .site-header {
     background-color: #000;
-    width: 100%;
 }
 
 .header-container {
     position: relative;
     width: 100%;
-    height: 512px;
+    max-width: 1536px; 
+    height: 512px;     
+    margin: 0 auto;    
     background-color: #000;
     overflow: hidden;
-    /* Use flex to align the logo and banner inside the container */
-    display: flex;
-    align-items: center;
 }
 
-/* THE BANNER - Now fills the background of the header */
 .banner {
-    position: absolute;
     width: 100%;
     height: 100%;
-    left: 0;
-    top: 0;
 }
 
 .banner img {
@@ -47,11 +33,15 @@ body {
     object-fit: contain; 
 }
 
-/* THE LOGO - Locked to the left edge of the .container */
+/* OG PC Logo Placement */
 .logo-overlay {
+    position: absolute;
+    left: 12.5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 10;
-    /* No more absolute centering math; it sits at the start of the flex container */
-    margin-left: 0; 
+    display: flex;
+    justify-content: center;
 }
 
 .logo-overlay img {
@@ -65,12 +55,15 @@ body {
     transform: scale(1.05);
 }
 
-/* MAIN CONTENT - Uses the same .container class for the Blue Line */
-main {
-    padding: 2rem 0; /* Vertical padding only; container handles the sides */
+/* --- 2. TABLET & MOBILE (THE "ALIGNED" LOOK) --- */
+@media (max-width: 1200px) {
+    /* Align logo with the 'Blue Line' of the text below when screen shrinks */
+    .logo-overlay {
+        left: 5%; /* Matches the 90% width container margin approximately */
+        transform: translateY(-50%);
+    }
 }
 
-/* TABLETS */
 @media (max-width: 768px) {
     .header-container {
         height: 256px;
@@ -79,12 +72,19 @@ main {
     .logo-overlay img {
         height: 180px;
     }
+    
+    .logo-overlay {
+        left: 5%;
+    }
 }
 
-/* MOBILE - Compact Armor */
 @media (max-width: 480px) {
     .header-container {
         height: 160px;
+    }
+
+    .logo-overlay {
+        left: 5%;
     }
 
     .logo-overlay img {

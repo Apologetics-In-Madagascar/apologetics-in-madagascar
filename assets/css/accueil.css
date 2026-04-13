@@ -80,18 +80,19 @@ p, li {
 /* MOBILE - Compact Armor */
 @media (max-width: 480px) {
     .header-container {
-        height: 230px;
+        height: 160px; /* Short, but still shows the art */
     }
 
     .logo-overlay {
-        left: 5%; /* Adjusted to keep it visible but not blocking the mother and child */
+        left: 8%; /* Slightly more breathing room from the edge */
         top: 50%;
         transform: translateY(-50%);
-        width: 80px;
+        width: 60px;
     }
 
     .logo-overlay img {
-        height: 80px;
-        width: 80px;
+        height: 60px; 
+        width: 60px;
+        filter: drop-shadow(0 0 10px rgba(0,0,0,0.8)); /* Sharper shadow for small size */
     }
 }
